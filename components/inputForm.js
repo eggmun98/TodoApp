@@ -13,7 +13,7 @@ const InputForm = () => {
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"} // 오타 수정
-      style={styles.container} // 'styles.addFormContainer' 로 변경할 필요가 있음
+      style={styles.addFormContainer} // 'styles.addFormContainer' 로 변경할 필요가 있음
     >
       <TextInput
         style={styles.inputField}
