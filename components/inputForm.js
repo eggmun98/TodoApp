@@ -1,16 +1,24 @@
-import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import {
+  KeyboardAvoidingView,
+  StyleSheet,
+  Text,
+  View,
+  TextInput,
+  Pressable,
+  Platform,
+} from "react-native";
 
 const InputForm = () => {
   return (
     <KeyboardAvoidingView
-      bahavior={Platform.OS === "ios" ? "padding" : "height"}
-      style={styles.container}
+      behavior={Platform.OS === "ios" ? "padding" : "height"} // 오타 수정
+      style={styles.container} // 'styles.addFormContainer' 로 변경할 필요가 있음
     >
       <TextInput
         style={styles.inputField}
         placeholder="할 일을 작성해주세요."
-      ></TextInput>
+      />
       <Pressable style={styles.addButton}>
         <Text style={styles.addButtonText}>+</Text>
       </Pressable>

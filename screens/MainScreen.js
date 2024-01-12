@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
   separator: {
     marginHorizontal: 10,
     marginTop: 25,
-    marginBottom10,
+    marginBottom: 10,
     borderBottomWidth: 1,
     borderBottomColor: "rgba(0,0,0,0.2)",
   },
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
   listTitle: {
     marginBottom: 25,
     paddingHorizontal: 15,
-    fontStyle: 41,
+    fontSize: 41,
     fontWeight: "500",
   },
 });
