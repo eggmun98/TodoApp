@@ -19,7 +19,7 @@ const InputForm = () => {
   // onChangeText속성은 텍트스가 변경될 때 마다 호출되는 콜백함수이다.
   // onSubmitEditing속성은 엔터를 클릭 했을 떄 함수를 호출 할수 있다.
 
-  const handSubmit = () => {
+  const handleSubmit = () => {
     if (currentValue !== "") {
       dispatch(addTodo(currentValue));
       setCurrentValue("");
@@ -35,17 +35,17 @@ const InputForm = () => {
 
   return (
     <KeyboardAvoidingView
-      behavior={Platform.OS === "ios" ? "padding" : "height"} // 오타 수정
-      style={styles.addFormContainer} // 'styles.addFormContainer' 로 변경할 필요가 있음
+      behavior={Platform.OS === "ios" ? "padding" : "height"}
+      style={styles.addFormContainer}
     >
       <TextInput
         style={styles.inputField}
         placeholder="할 일을 작성해주세요."
-        onChangeText={setCurrentValue}
         value={currentValue}
-        onSubmitEditing={handSubmit}
+        onChangeText={setCurrentValue}
+        onSubmitEditing={handleSubmit}
       />
-      <Pressable style={styles.addButton} onPress={handSubmit}>
+      <Pressable style={styles.addButton} onPress={handleSubmit}>
         <Text style={styles.addButtonText}>+</Text>
       </Pressable>
     </KeyboardAvoidingView>
