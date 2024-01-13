@@ -1,25 +1,11 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
 import MainScreen from "./screens/MainScreen";
-import Svg, { Path } from "react-native-svg";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
 
 export default function App() {
   return (
-    <>
+    <Provider store={store}>
       <MainScreen></MainScreen>
-      {/* <View style={styles.container}>
-        <Text>TodoApp</Text>
-        <StatusBar style="auto" />
-      </View> */}
-    </>
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
